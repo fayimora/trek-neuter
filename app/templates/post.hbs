@@ -1,0 +1,17 @@
+{{#if isEditting}}
+  {{partial 'post/edit'}}
+  <button {{action 'doneEditting'}}>Done</button>
+{{else}}
+  <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
+<h1>{{title}}</h1>
+<h2>By {{author}} <small class="muted">({{date publishedAt}})</small></h2>
+
+<div class="intro">
+  {{markdown intro}}
+</div>
+
+<div class="below-the-fold">
+  {{markdown extended}}
+</div>
